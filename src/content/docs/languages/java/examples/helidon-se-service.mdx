@@ -1,0 +1,49 @@
+---
+title: Helidon SE Service
+description: Example Helidon SE HTTP service with configuration, health checks, and tests.
+---
+
+import { LinkCard, Badge } from '@astrojs/starlight/components';
+
+A Helidon SE HTTP service used as the reference shape for the SE path of [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/).
+
+## Goals
+
+- Start a Helidon SE server with explicit routing
+- Load configuration through Helidon Config
+- Expose an application endpoint and health checks
+- Include HTTP-focused tests
+
+## Related skill
+
+| Skill | Status |
+| --- | --- |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | <Badge text="In Progress" variant="caution" /> |
+
+## Expected structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Main.java
+│   │       └── service/
+│   └── resources/
+│       └── application.yaml
+└── test/
+    └── java/
+```
+
+## Suggested verification
+
+```bash
+./mvnw test
+./mvnw package
+java -jar target/*-SNAPSHOT.jar
+```
+
+## Related pages
+
+- <LinkCard title="Helidon framework" href="/languages/java/frameworks/helidon/" />
+- <LinkCard title="Helidon Bootstrap skill" href="/languages/java/skills/helidon-bootstrap/" />

@@ -1,0 +1,36 @@
+---
+title: Security
+description: Baseline security guidance for AI-generated Java applications in AI Coding Skills.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Bootstrap skills prioritize a runnable structure. Security hardening is intentional follow-on work. Use this guide when extending generated applications.
+
+## Baseline practices
+
+- Do not expose sensitive Actuator or admin endpoints by default
+- Validate and sanitize untrusted input at API boundaries
+- Avoid embedding secrets in source or example configs
+- Prefer least-privilege dependencies and keep versions current
+- Document authentication/authorization as explicit follow-up when not generated
+
+## Prompt patterns
+
+```text
+Add centralized exception handling that does not leak stack traces to clients.
+```
+
+```text
+Add authentication and authorization appropriate for a public REST API.
+Document the threat model assumptions in README.
+```
+
+## Related material
+
+- Framework pages under [`/languages/java/frameworks/`](/languages/java/frameworks/)
+- Future dedicated security skills on the [roadmap](/roadmap/)
+
+<Aside type="caution">
+Treat AI-generated security code as a draft. Review authn/authz, dependency choices, and error handling before production use.
+</Aside>

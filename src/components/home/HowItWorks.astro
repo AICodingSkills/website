@@ -1,0 +1,35 @@
+---
+const steps = [
+	{
+		title: 'Choose a platform',
+		description:
+			'Install the platform-specific repository for GitHub Copilot, Grok, or Claude Code.',
+	},
+	{
+		title: 'Select a language and framework skill',
+		description: 'Start with Java and a bootstrap skill for Spring Boot, Helidon, or Jetty.',
+	},
+	{
+		title: 'Bootstrap or extend an application',
+		description:
+			'Prompt with a concrete goal, then iterate on validation, persistence, testing, and operations.',
+	},
+] as const;
+---
+
+<ol class="how-steps">
+	{
+		steps.map((step, index) => (
+			<li class="how-steps__item">
+				<div class="how-steps__marker" aria-hidden="true">
+					<span class="how-steps__number">{index + 1}</span>
+					{index < steps.length - 1 && <span class="how-steps__connector" />}
+				</div>
+				<div class="how-steps__copy">
+					<h3 class="how-steps__title">{step.title}</h3>
+					<p class="how-steps__description">{step.description}</p>
+				</div>
+			</li>
+		))
+	}
+</ol>

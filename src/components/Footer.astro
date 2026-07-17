@@ -1,0 +1,54 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import { Icon } from '@astrojs/starlight/components';
+
+const year = new Date().getFullYear();
+
+const links = [
+	{ href: '/getting-started/', label: 'Docs' },
+	{ href: '/platforms/overview/', label: 'Platforms' },
+	{ href: '/languages/java/', label: 'Java' },
+	{ href: '/contributing/', label: 'Contributing' },
+	{ href: '/roadmap/', label: 'Roadmap' },
+	{ href: '/about/', label: 'About' },
+] as const;
+---
+
+<div class="page-footer">
+	<Default><slot /></Default>
+
+	<div class="site-footer">
+		<div class="site-footer__inner">
+			<div class="site-footer__brand">
+				<p class="site-footer__copy">
+					© {year} AI Coding Skills. All rights reserved.
+				</p>
+				<p class="site-footer__tagline">
+					Community-maintained skills for AI coding tools.
+				</p>
+			</div>
+
+			<nav class="site-footer__nav" aria-label="Footer">
+				{
+					links.map(({ href, label }) => (
+						<a class="site-footer__link" href={href}>
+							{label}
+						</a>
+					))
+				}
+			</nav>
+
+			<div class="site-footer__social">
+				<a
+					class="site-footer__social-link"
+					href="https://github.com/AI-Coding-Skills"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span class="sr-only">GitHub</span>
+					<Icon name="github" size="1.1rem" />
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

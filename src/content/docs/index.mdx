@@ -1,0 +1,147 @@
+---
+title: AI Coding Skills
+description: Community-maintained skills, plugins, agents, prompts, and examples for AI coding tools.
+template: splash
+hero:
+  title: AI Coding Skills
+  tagline: Community-maintained skills, plugins, agents, prompts, and examples for AI coding tools.
+  actions:
+    - text: Explore Java Skills
+      link: /languages/java/skills/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/AI-Coding-Skills
+      icon: external
+      variant: secondary
+    - text: Getting Started
+      link: /getting-started/
+      variant: minimal
+      icon: right-arrow
+---
+
+import { Card, CardGrid, Badge } from '@astrojs/starlight/components';
+import HomeSection from '../../components/home/HomeSection.astro';
+import SectionHeader from '../../components/home/SectionHeader.astro';
+import HowItWorks from '../../components/home/HowItWorks.astro';
+
+<div class="home-page not-content">
+
+<HomeSection labelledBy="platforms-heading">
+	<SectionHeader
+		title="Supported Platforms"
+		description="Install skills where you already write code."
+		headingId="platforms-heading"
+	/>
+	<CardGrid>
+		<Card title="GitHub Copilot" icon="github">
+			Java skills, custom instructions, prompts, and Copilot SDK examples.
+
+			[Platform guide](/platforms/github-copilot/) · [Repository](https://github.com/AI-Coding-Skills/java-for-github-copilot)
+		</Card>
+		<Card title="Grok" icon="rocket">
+			Java bootstrap skills packaged for the Grok plugin ecosystem.
+
+			[Platform guide](/platforms/grok/) · [Repository](https://github.com/AI-Coding-Skills/java-for-grok)
+		</Card>
+		<Card title="Claude Code" icon="puzzle">
+			Java skills, commands, agents, and workflows for Claude Code.
+
+			[Platform guide](/platforms/claude-code/) · [Repository](https://github.com/AI-Coding-Skills/java-for-claude-code)
+		</Card>
+	</CardGrid>
+</HomeSection>
+
+<HomeSection labelledBy="frameworks-heading">
+	<SectionHeader
+		title="Java Frameworks"
+		description="Programming models and conventions, independent of any one skill."
+		headingId="frameworks-heading"
+	/>
+	<CardGrid>
+		<Card title="Spring Boot" icon="seti:spring">
+			Web, configuration, validation, persistence, testing, Actuator, and production conventions.
+
+			[Explore framework →](/languages/java/frameworks/spring-boot/)
+		</Card>
+		<Card title="Helidon" icon="puzzle">
+			Helidon SE and Helidon MP, including Jakarta EE and MicroProfile conventions.
+
+			[Explore framework →](/languages/java/frameworks/helidon/)
+		</Card>
+		<Card title="Jetty" icon="laptop">
+			Embedded Jetty with handlers, Jakarta Servlet APIs, lifecycle, and HTTP testing.
+
+			[Explore framework →](/languages/java/frameworks/jetty/)
+		</Card>
+	</CardGrid>
+</HomeSection>
+
+<HomeSection labelledBy="skills-heading">
+	<SectionHeader
+		title="Java Skills"
+		description="Bootstrap runnable applications with sensible defaults and tests."
+		headingId="skills-heading"
+	/>
+	<CardGrid>
+		<Card title="Spring Boot Bootstrap" icon="rocket">
+			<Badge text="Available" variant="success" />
+
+			Controllers, services, configuration, validation, health checks, and tests.
+
+			[Open skill →](/languages/java/skills/springboot-bootstrap/)
+		</Card>
+		<Card title="Helidon Bootstrap" icon="puzzle">
+			<Badge text="In Progress" variant="caution" />
+
+			Helidon SE and MP apps with endpoints, configuration, health checks, and tests.
+
+			[Open skill →](/languages/java/skills/helidon-bootstrap/)
+		</Card>
+		<Card title="Jetty Bootstrap" icon="laptop">
+			<Badge text="Planned" variant="note" />
+
+			Embedded Jetty apps with handlers, servlet APIs, shutdown, and integration tests.
+
+			[Open skill →](/languages/java/skills/jetty-bootstrap/)
+		</Card>
+	</CardGrid>
+</HomeSection>
+
+<HomeSection labelledBy="how-heading" class="home-section--quiet">
+	<SectionHeader
+		title="How It Works"
+		description="Three steps from empty workspace to a runnable Java application."
+		headingId="how-heading"
+	/>
+	<HowItWorks />
+</HomeSection>
+
+<HomeSection labelledBy="examples-heading" class="home-section--final">
+	<SectionHeader
+		title="Examples"
+		description="Reference applications that demonstrate expected skill output."
+		headingId="examples-heading"
+	>
+		<a slot="action" class="section-header__link" href="/languages/java/examples/">View all</a>
+	</SectionHeader>
+	<CardGrid>
+		<Card title="Spring Boot REST API" icon="document">
+			Layered service with validation, Actuator, and tests.
+
+			[View example →](/languages/java/examples/spring-boot-rest-api/)
+		</Card>
+		<Card title="Helidon SE Service" icon="document">
+			HTTP service with configuration, health checks, and tests.
+
+			[View example →](/languages/java/examples/helidon-se-service/)
+		</Card>
+		<Card title="Embedded Jetty Application" icon="document">
+			Handlers, servlet APIs, and graceful shutdown.
+
+			[View example →](/languages/java/examples/embedded-jetty/)
+		</Card>
+	</CardGrid>
+</HomeSection>
+
+</div>

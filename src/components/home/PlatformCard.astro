@@ -1,0 +1,38 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import type { ComponentProps } from 'astro/types';
+import FeatureCard from './FeatureCard.astro';
+
+type IconName = ComponentProps<typeof Icon>['name'];
+
+interface Props {
+	title: string;
+	icon: IconName;
+	description: string;
+	guideHref: string;
+	repoHref: string;
+}
+
+const { title, icon, description, guideHref, repoHref } = Astro.props;
+---
+
+<FeatureCard class="platform-card">
+	<div class="platform-card__top">
+		<span class="platform-card__icon" aria-hidden="true">
+			<Icon name={icon} size="1.35rem" />
+		</span>
+		<h3 class="platform-card__title">{title}</h3>
+	</div>
+	<p class="platform-card__description">{description}</p>
+	<div class="platform-card__links">
+		<a class="card-link card-link--primary" href={guideHref}>View platform guide</a>
+		<a
+			class="card-link card-link--secondary"
+			href={repoHref}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Repository
+		</a>
+	</div>
+</FeatureCard>

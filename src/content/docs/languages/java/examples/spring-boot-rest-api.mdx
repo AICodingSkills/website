@@ -1,0 +1,55 @@
+---
+title: Spring Boot REST API
+description: Example Spring Boot REST API demonstrating layered structure, validation, Actuator, and tests.
+---
+
+import { LinkCard, Badge } from '@astrojs/starlight/components';
+
+A layered Spring Boot REST API used as the reference shape for [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/).
+
+## Goals
+
+- Expose a small resource API (for example, customers)
+- Keep controller, service, and persistence concerns separated
+- Validate input and return consistent error responses
+- Enable Actuator health
+- Include automated tests
+
+## Related skill
+
+| Skill | Status |
+| --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | <Badge text="Available" variant="success" /> |
+
+## Expected structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Application.java
+│   │       └── customer/
+│   │           ├── CustomerController.java
+│   │           ├── CustomerService.java
+│   │           ├── CustomerRepository.java
+│   │           └── CustomerResponse.java
+│   └── resources/
+│       └── application.yml
+└── test/
+    └── java/
+```
+
+## Suggested verification
+
+```bash
+./mvnw test
+./mvnw spring-boot:run
+```
+
+Confirm health via Actuator and exercise the resource endpoints with HTTP requests or tests.
+
+## Related pages
+
+- <LinkCard title="Spring Boot framework" href="/languages/java/frameworks/spring-boot/" />
+- <LinkCard title="Spring Boot Bootstrap skill" href="/languages/java/skills/springboot-bootstrap/" />

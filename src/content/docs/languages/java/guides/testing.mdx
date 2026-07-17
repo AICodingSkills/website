@@ -1,0 +1,39 @@
+---
+title: Testing
+description: Testing expectations for AI Coding Skills Java applications and bootstrap skills.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Generated Java applications should be testable from the first commit. Skills and examples should prefer small, deterministic tests over manual-only verification.
+
+## Expectations
+
+- Include at least one automated test that fails if the primary endpoint regresses
+- Prefer ephemeral ports for embedded servers
+- Keep unit tests fast; use integration tests for HTTP and persistence boundaries
+- When adding databases, include Testcontainers or an equivalent strategy when practical
+
+## Framework notes
+
+| Framework | Testing focus |
+| --- | --- |
+| Spring Boot | `@SpringBootTest`, web slice tests, Testcontainers for persistence |
+| Helidon | HTTP tests against SE/MP endpoints and health checks |
+| Jetty | Start embedded server in tests; assert handler/servlet responses |
+
+## Prompt patterns
+
+```text
+Add integration tests that start the application on an ephemeral port
+and verify the primary JSON endpoint and health check.
+```
+
+```text
+Add PostgreSQL persistence and Testcontainers to this Spring Boot project.
+Keep tests hermetic and document required Docker availability.
+```
+
+<Aside type="tip">
+If a skill cannot add meaningful tests yet, document that limitation on the skill page instead of silently omitting them.
+</Aside>

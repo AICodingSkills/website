@@ -1,0 +1,50 @@
+---
+title: Java Skills
+description: Bootstrap and extension skills for Java frameworks in AI Coding Skills.
+---
+
+import { Badge, LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+Java skills teach AI coding tools how to bootstrap or extend applications with consistent structure, tests, and operational basics. Each skill page lists platform support, prompts, expected structure, and limitations.
+
+## Skills
+
+<CardGrid>
+	<LinkCard
+		title="Spring Boot Bootstrap"
+		href="/languages/java/skills/springboot-bootstrap/"
+		description="Available — runnable Spring Boot apps with controllers, services, validation, Actuator, and tests."
+	/>
+	<LinkCard
+		title="Helidon Bootstrap"
+		href="/languages/java/skills/helidon-bootstrap/"
+		description="In Progress — Helidon SE and MP applications with endpoints, config, health, and tests."
+	/>
+	<LinkCard
+		title="Jetty Bootstrap"
+		href="/languages/java/skills/jetty-bootstrap/"
+		description="Planned — embedded Jetty apps with handlers, servlet APIs, shutdown, and integration tests."
+	/>
+</CardGrid>
+
+## Status summary
+
+| Skill | Status |
+| --- | --- |
+| Spring Boot Bootstrap | <Badge text="Available" variant="success" /> |
+| Helidon Bootstrap | <Badge text="In Progress" variant="caution" /> |
+| Jetty Bootstrap | <Badge text="Planned" variant="note" /> |
+
+## Skill page contract
+
+Every skill page should include:
+
+- purpose and current status
+- supported frameworks and Java versions
+- platform repositories and per-platform usage notes
+- example prompts and expected project structure
+- limitations, roadmap, related examples, and framework links
+
+<Aside type="tip">
+Platform install steps live under [Platforms](/platforms/overview/). Skill pages link there instead of duplicating packaging details.
+</Aside>

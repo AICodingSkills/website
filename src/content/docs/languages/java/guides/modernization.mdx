@@ -1,0 +1,39 @@
+---
+title: Modernization
+description: Practical Java modernization guidance for AI Coding Skills workflows.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Modernization guides help agents evolve existing Java applications toward current LTS Java versions, Jakarta namespaces, and maintainable structure—without rewriting for novelty.
+
+## Common modernization targets
+
+- Java 8/11 → Java 17/21
+- `javax.*` → `jakarta.*` where required by current frameworks
+- Legacy build layouts → clearer module/package structure
+- Missing tests → baseline HTTP and persistence tests
+- Ad-hoc configuration → type-safe configuration
+
+## Prompt patterns
+
+```text
+Modernize this Spring Boot application to Java 21 and current Spring Boot 3.x.
+Keep behavior stable, update Jakarta imports, and fix tests.
+```
+
+```text
+Identify dead code and unsafe defaults in this service.
+Propose a minimal PR-sized modernization plan before editing.
+```
+
+## Working agreements
+
+1. Prefer incremental, reviewable changes.
+2. Keep behavior stable unless the user asks for a redesign.
+3. Update tests in the same change set when APIs move.
+4. Record unsupported framework jumps as limitations.
+
+<Aside type="tip">
+Pair modernization work with the [testing guide](/languages/java/guides/testing/) so refactors stay verifiable.
+</Aside>

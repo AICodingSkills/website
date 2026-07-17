@@ -1,0 +1,24 @@
+---
+import FeatureCard from './FeatureCard.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	href: string;
+	label?: string;
+}
+
+const { title, description, href, label = 'Framework' } = Astro.props;
+---
+
+<FeatureCard class="framework-card">
+	<div class="framework-card__meta">
+		<span class="framework-card__label">{label}</span>
+	</div>
+	<h3 class="framework-card__title">{title}</h3>
+	<p class="framework-card__description">{description}</p>
+	<a class="card-link card-link--arrow" href={href}>
+		Explore framework
+		<span aria-hidden="true">→</span>
+	</a>
+</FeatureCard>

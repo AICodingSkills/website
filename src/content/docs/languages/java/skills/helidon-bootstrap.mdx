@@ -1,0 +1,124 @@
+---
+title: Helidon Bootstrap
+description: Bootstrap Helidon SE and Helidon MP applications with REST endpoints, services, configuration, health checks, and tests.
+badge:
+  text: In Progress
+  variant: caution
+---
+
+import { Badge, Aside, LinkCard, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Create Helidon SE and Helidon MP applications with REST endpoints, services, configuration, health checks, and tests.
+
+## Purpose
+
+Give AI coding tools a reliable way to scaffold Helidon applications while keeping SE and MP programming models distinct.
+
+## Current status
+
+<Badge text="In Progress" variant="caution" /> on [Grok](/platforms/grok/).  
+<Badge text="Planned" variant="note" /> for [GitHub Copilot](/platforms/github-copilot/) and [Claude Code](/platforms/claude-code/).
+
+## Supported frameworks
+
+- [Helidon](/languages/java/frameworks/helidon/) (SE and MP)
+
+## Supported Java versions
+
+- Java 21 (preferred)
+- Java 17 (supported where required by the Helidon version)
+
+## Supported platform repositories
+
+| Platform | Repository | Status |
+| --- | --- | --- |
+| Grok | [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) | In Progress |
+| GitHub Copilot | [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) | Planned |
+| Claude Code | [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) | Planned |
+
+## Common use cases
+
+- Bootstrap a Helidon SE HTTP service
+- Bootstrap a Helidon MP JAX-RS application
+- Add configuration and health checks
+- Add service-layer structure and HTTP tests
+
+## Example prompts
+
+```text
+Bootstrap a Helidon SE service using Java 21 and Maven with a greeting endpoint, configuration, health checks, and tests.
+```
+
+```text
+Create a Helidon MP application with a JAX-RS resource, CDI service, MicroProfile Config, and health endpoints.
+```
+
+```text
+Add integration tests that exercise the HTTP endpoints for this Helidon service.
+```
+
+## Expected generated project structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Main.java
+│   │       └── service/
+│   └── resources/
+│       └── application.yaml
+└── test/
+    └── java/
+```
+
+SE vs MP variants differ; generated README content should state which model was chosen.
+
+## Installation or usage by platform
+
+<Tabs>
+	<TabItem label="Grok">
+		1. Install from [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok).
+		2. Enable Helidon Bootstrap when the skill is marked Available in the repository.
+		3. State SE or MP explicitly in your prompt.
+		4. Build and run tests.
+	</TabItem>
+	<TabItem label="GitHub Copilot">
+		<Badge text="Planned" variant="note" /> — see [platform docs](/platforms/github-copilot/).
+	</TabItem>
+	<TabItem label="Claude Code">
+		<Badge text="Planned" variant="note" /> — see [platform docs](/platforms/claude-code/).
+	</TabItem>
+</Tabs>
+
+## Source repository links
+
+- [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok)
+- [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot)
+- [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code)
+
+## Limitations
+
+- SE/MP mixing is out of scope for bootstrap.
+- Observability and security hardening are follow-on skills/guides.
+- Status may move from In Progress to Available without a site redesign—check the repository and [compatibility matrix](/languages/java/compatibility/).
+
+## Roadmap
+
+- Complete Grok packaging and validation
+- Copilot and Claude Code adaptations
+- Additional examples for MP and SE
+
+## Related examples
+
+<CardGrid>
+	<LinkCard title="Helidon SE Service" href="/languages/java/examples/helidon-se-service/" />
+</CardGrid>
+
+## Related framework page
+
+<LinkCard title="Helidon framework" href="/languages/java/frameworks/helidon/" />
+
+<Aside type="caution">
+Treat generated output as draft until the skill status is Available on your platform.
+</Aside>

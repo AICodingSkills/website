@@ -1,0 +1,56 @@
+---
+title: Getting Started
+description: Install AI Coding Skills for GitHub Copilot, Grok, or Claude Code and bootstrap your first Java application.
+---
+
+import { Steps, LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+AI Coding Skills provides community-maintained skills, plugins, agents, prompts, and examples for AI coding tools. The initial focus is **Java**, with bootstrap skills for Spring Boot, Helidon, and Jetty.
+
+## Choose a platform
+
+Pick the AI coding tool you already use, then open its platform page for install details:
+
+<CardGrid>
+	<LinkCard title="GitHub Copilot" href="/platforms/github-copilot/" description="Skills, custom instructions, prompts, and Copilot SDK examples." />
+	<LinkCard title="Grok" href="/platforms/grok/" description="Java bootstrap skills for the Grok plugin ecosystem." />
+	<LinkCard title="Claude Code" href="/platforms/claude-code/" description="Skills, commands, agents, and workflows for Claude Code." />
+</CardGrid>
+
+## Quick start
+
+<Steps>
+
+1. **Install the platform repository**  
+   Clone or install the package from the platform-specific Java repository:
+
+   - [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot)
+   - [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok)
+   - [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code)
+
+2. **Select a bootstrap skill**  
+   Start with [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) if you want a conventional REST API. Helidon and Jetty skills follow the same pattern as they become available.
+
+3. **Prompt with a concrete goal**  
+   Include Java version, build tool, and the features you need:
+
+   ```text
+   Bootstrap a Spring Boot application using Java 21 and Maven.
+   Create a customer REST API with controller, service, repository,
+   validation, Actuator, and tests.
+   ```
+
+4. **Validate the generated project**  
+   Build, run tests, and compare the layout against the skill’s expected structure. Use [examples](/languages/java/examples/) as reference applications.
+
+</Steps>
+
+<Aside type="tip" title="Status first">
+Check the [compatibility matrix](/languages/java/compatibility/) before relying on a skill in a specific platform. Statuses are updated as coverage lands.
+</Aside>
+
+## What to read next
+
+- [Java overview](/languages/java/) — platforms, frameworks, skills, and repositories
+- [Frameworks](/languages/java/frameworks/) — programming models independent of any one skill
+- [Contributing](/contributing/) — how to improve skills, examples, and docs

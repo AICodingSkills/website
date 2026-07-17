@@ -1,0 +1,86 @@
+---
+title: GitHub Copilot
+description: Install and use AI Coding Skills Java packages with GitHub Copilot.
+---
+
+import { Aside, Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+GitHub Copilot support focuses on Java skills, custom instructions, prompts, and Copilot SDK examples that help agents bootstrap and extend applications consistently.
+
+## Repository
+
+[AI-Coding-Skills/java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot)
+
+## Supported components
+
+| Component | Purpose |
+| --- | --- |
+| Skills | Framework bootstrap and extension guidance |
+| Custom instructions | Persistent project conventions for Copilot |
+| Prompts | Reusable task prompts for common Java workflows |
+| Copilot SDK examples | Programmatic agent and tooling samples |
+
+## Installation approach
+
+1. Open the [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) repository.
+2. Follow the repository README for the current Copilot packaging format (instructions, prompt files, and skill assets).
+3. Enable the relevant instructions or skills in your workspace or organization settings.
+4. Verify with a small bootstrap prompt from a [Java skill page](/languages/java/skills/).
+
+Exact file paths and enablement steps may change as Copilot packaging evolves—treat the repository README as the source of truth for install mechanics.
+
+## Plugin or skill structure
+
+Expect platform assets to separate:
+
+- **Instructions** — durable conventions (Java version, testing, package layout)
+- **Skills / prompts** — task-oriented guidance for bootstrap and extension
+- **Examples** — reference prompts and SDK samples
+
+Language-specific behavior is documented on skill pages, not duplicated here.
+
+## Current Java skills
+
+| Skill | Status |
+| --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | <Badge text="Planned" variant="note" /> |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | <Badge text="Planned" variant="note" /> |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | <Badge text="Planned" variant="note" /> |
+
+See the [compatibility matrix](/languages/java/compatibility/) for the latest cross-platform status.
+
+## Example prompts
+
+```text
+Bootstrap a Spring Boot application using Java 21 and Maven.
+Create a customer REST API with controller, service, repository,
+validation, Actuator, and tests.
+```
+
+```text
+Add centralized exception handling to this Spring Boot REST API.
+Keep the existing package structure and add tests for error responses.
+```
+
+## Contribution process
+
+1. Propose changes in [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot).
+2. Keep framework semantics aligned with [`/languages/java/frameworks/`](/languages/java/frameworks/).
+3. Update compatibility notes when a skill becomes usable in Copilot.
+4. Follow the org-wide [Contributing guide](/contributing/).
+
+## Compatibility status
+
+Copilot packaging for Java bootstrap skills is **planned**. Use this page for conventions and repository links; confirm readiness in the skill pages and compatibility table before production use.
+
+<Aside type="caution" title="Do not duplicate framework docs">
+For Spring Boot, Helidon, and Jetty programming models, use the framework pages under Languages → Java.
+</Aside>
+
+## Related Java skills
+
+<CardGrid>
+	<LinkCard title="Spring Boot Bootstrap" href="/languages/java/skills/springboot-bootstrap/" />
+	<LinkCard title="Helidon Bootstrap" href="/languages/java/skills/helidon-bootstrap/" />
+	<LinkCard title="Jetty Bootstrap" href="/languages/java/skills/jetty-bootstrap/" />
+</CardGrid>

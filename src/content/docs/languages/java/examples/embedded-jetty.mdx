@@ -1,0 +1,50 @@
+---
+title: Embedded Jetty Application
+description: Example embedded Jetty application using handlers, Jakarta Servlet APIs, and graceful shutdown.
+---
+
+import { LinkCard, Badge } from '@astrojs/starlight/components';
+
+An embedded Jetty application used as the design target for [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/).
+
+## Goals
+
+- Bootstrap an embedded Jetty `Server`
+- Serve requests through handlers and/or Jakarta Servlets
+- Shut down gracefully
+- Cover HTTP behavior with integration tests on an ephemeral port
+
+## Related skill
+
+| Skill | Status |
+| --- | --- |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | <Badge text="Planned" variant="note" /> |
+
+## Expected structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Application.java
+│   │       ├── server/
+│   │       │   └── JettyServerFactory.java
+│   │       └── handler/
+│   └── resources/
+└── test/
+    └── java/
+```
+
+## Suggested verification
+
+```bash
+./mvnw test
+./mvnw package
+java -jar target/*-SNAPSHOT.jar
+```
+
+## Related pages
+
+- <LinkCard title="Jetty framework" href="/languages/java/frameworks/jetty/" />
+- <LinkCard title="Jetty Bootstrap skill" href="/languages/java/skills/jetty-bootstrap/" />

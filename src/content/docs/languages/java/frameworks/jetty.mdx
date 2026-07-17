@@ -1,0 +1,81 @@
+---
+title: Jetty
+description: Embedded Jetty framework overview for AI Coding Skills.
+---
+
+import { Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+Jetty coverage focuses on **embedded Jetty** applications: handlers, Jakarta Servlet APIs, server lifecycle management, and HTTP testing without requiring an external servlet container install.
+
+## Framework overview
+
+AI Coding Skills Jetty work emphasizes:
+
+- Embedded `Server` bootstrap and graceful shutdown
+- Handlers and/or Jakarta Servlet deployments
+- Clear separation of server wiring and application logic
+- Integration tests over HTTP
+
+## Supported Java versions
+
+| Java | Notes |
+| --- | --- |
+| 21 | Preferred for new projects |
+| 17 | Supported for compatibility |
+
+## Supported framework versions
+
+Target a current stable Eclipse Jetty 12.x line with Jakarta EE APIs unless a skill page states otherwise.
+
+## Programming model
+
+- Construct and configure an embedded Jetty `Server`
+- Register handlers or servlet contexts
+- Manage lifecycle (start, join/stop, graceful shutdown)
+- Prefer `jakarta.servlet` APIs over legacy `javax.servlet`
+
+## Common project structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Application.java
+│   │       ├── server/
+│   │       │   └── JettyServerFactory.java
+│   │       └── handler/
+│   └── resources/
+└── test/
+    └── java/
+```
+
+## Relevant skills
+
+| Skill | Status |
+| --- | --- |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | <Badge text="Planned" variant="note" /> |
+
+## Available examples
+
+<CardGrid>
+	<LinkCard title="Embedded Jetty Application" href="/languages/java/examples/embedded-jetty/" description="Handlers, servlet APIs, and graceful shutdown." />
+</CardGrid>
+
+## Platform availability
+
+| Platform | Bootstrap skill status |
+| --- | --- |
+| GitHub Copilot | Planned |
+| Grok | Planned |
+| Claude Code | Planned |
+
+## Official documentation
+
+- [Eclipse Jetty documentation](https://jetty.org/docs/)
+
+## Compatibility notes
+
+- Prefer Jetty 12 + Jakarta namespaces for new skills.
+- Always demonstrate graceful shutdown in bootstrap output.
+- Keep HTTP tests independent of hardcoded developer machine ports when practical.

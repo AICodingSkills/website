@@ -1,0 +1,42 @@
+---
+title: Compatibility
+description: Platform support status for AI Coding Skills Java skills across GitHub Copilot, Grok, and Claude Code.
+---
+
+import { Badge, Aside } from '@astrojs/starlight/components';
+
+Use this matrix to see which platforms currently support each Java skill. Statuses are intentionally simple so contributors can update them quickly.
+
+## Status legend
+
+| Status | Badge | Meaning |
+| --- | --- | --- |
+| Available | <Badge text="Available" variant="success" /> | Usable in the platform repository today |
+| In Progress | <Badge text="In Progress" variant="caution" /> | Active packaging or validation work |
+| Planned | <Badge text="Planned" variant="note" /> | Intended, not ready for reliance |
+| Experimental | <Badge text="Experimental" variant="tip" /> | Usable with known limitations |
+
+## Skill × platform matrix
+
+| Skill | GitHub Copilot | Grok | Claude Code |
+| --- | --- | --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | Planned | Available | Planned |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | Planned | In Progress | Planned |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | Planned | Planned | Planned |
+
+## How to update statuses
+
+1. Confirm the skill works in the platform repository (install, prompt, build, tests).
+2. Update this page and the matching rows on the [Java overview](/languages/java/).
+3. Update badges on the skill page and sidebar entry in `astro.config.mjs` if the overall skill status changed.
+4. Note platform-specific limitations on the skill page under **Limitations**.
+
+<Aside type="note">
+Platform pages link here and to skill pages. They should not invent separate status systems.
+</Aside>
+
+## Related pages
+
+- [Platforms overview](/platforms/overview/)
+- [Java skills](/languages/java/skills/)
+- [Contributing](/contributing/)

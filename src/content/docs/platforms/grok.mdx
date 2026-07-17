@@ -1,0 +1,81 @@
+---
+title: Grok
+description: Install and use AI Coding Skills Java packages with Grok.
+---
+
+import { Aside, Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+Grok support packages Java application bootstrap skills for the Grok plugin ecosystem, with an emphasis on runnable Spring Boot, Helidon, and Jetty starting points.
+
+## Repository
+
+[AI-Coding-Skills/java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok)
+
+## Supported components
+
+| Component | Purpose |
+| --- | --- |
+| Plugin packages | Installable skill bundles for Grok |
+| Bootstrap skills | Generate runnable Java applications |
+| Prompts | Task prompts aligned with each skill |
+| Compatibility notes | Platform-specific limitations and versions |
+
+## Installation approach
+
+1. Open the [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) repository.
+2. Follow the README for current Grok plugin install steps.
+3. Enable the Java bootstrap skills you need in your Grok environment.
+4. Run a skill prompt and validate build + tests locally.
+
+## Plugin or skill structure
+
+Grok packaging typically groups:
+
+- **Skill manifests** — metadata, status, and entry guidance
+- **Instruction content** — framework and project conventions
+- **Prompt templates** — copy-ready bootstrap and extension prompts
+
+Refer to the repository for the authoritative layout.
+
+## Current Java skills
+
+| Skill | Status |
+| --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | <Badge text="Available" variant="success" /> |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | <Badge text="In Progress" variant="caution" /> |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | <Badge text="Planned" variant="note" /> |
+
+## Example prompts
+
+```text
+Bootstrap a Spring Boot application using Java 21 and Maven.
+Create a customer REST API with controller, service, repository,
+validation, Actuator, and tests.
+```
+
+```text
+Add PostgreSQL persistence and Testcontainers to this Spring Boot project.
+```
+
+## Contribution process
+
+1. Open issues or pull requests in [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok).
+2. Keep skill behavior consistent with the shared Java skill docs on this site.
+3. Update status badges and the [compatibility matrix](/languages/java/compatibility/) when coverage changes.
+4. Follow the [Contributing guide](/contributing/).
+
+## Compatibility status
+
+Grok is the initial platform with **Available** coverage for Spring Boot Bootstrap. Helidon is in progress; Jetty is planned.
+
+<Aside type="note">
+Skill pages under Languages → Java remain the canonical place for prompts, expected structure, and limitations.
+</Aside>
+
+## Related Java skills
+
+<CardGrid>
+	<LinkCard title="Spring Boot Bootstrap" href="/languages/java/skills/springboot-bootstrap/" />
+	<LinkCard title="Helidon Bootstrap" href="/languages/java/skills/helidon-bootstrap/" />
+	<LinkCard title="Jetty Bootstrap" href="/languages/java/skills/jetty-bootstrap/" />
+</CardGrid>

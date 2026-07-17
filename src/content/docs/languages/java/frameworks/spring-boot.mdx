@@ -1,0 +1,93 @@
+---
+title: Spring Boot
+description: Spring Boot framework overview for AI Coding Skills — programming model, versions, skills, and examples.
+---
+
+import { Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+Spring Boot is the primary application framework covered by the initial AI Coding Skills Java work. Skills target conventional layered applications with validation, persistence options, Actuator, and tests.
+
+## Framework overview
+
+Spring Boot provides opinionated defaults for dependency management, auto-configuration, embedded servers, and production-ready endpoints. AI Coding Skills focuses on:
+
+- Spring Web REST APIs
+- Configuration and `@ConfigurationProperties`
+- Bean Validation
+- Persistence with Spring Data patterns
+- Testing with Spring Boot Test and Testcontainers where appropriate
+- Actuator health and operational endpoints
+
+## Supported Java versions
+
+| Java | Notes |
+| --- | --- |
+| 21 | Preferred for new projects |
+| 17 | Supported for compatibility |
+
+## Supported framework versions
+
+Skills should target a current stable Spring Boot 3.x line unless a skill page states otherwise. Pin exact versions in generated builds and update skills when breaking changes land.
+
+## Programming model
+
+Typical generated applications use:
+
+- A single `@SpringBootApplication` entry point
+- Package-by-feature or layered packages under a clear base package
+- Controllers → services → repositories
+- `application.yml` for configuration
+- Unit and slice/integration tests under `src/test/java`
+
+## Common project structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Application.java
+│   │       └── customer/
+│   │           ├── CustomerController.java
+│   │           ├── CustomerService.java
+│   │           ├── CustomerRepository.java
+│   │           └── CustomerResponse.java
+│   └── resources/
+│       └── application.yml
+└── test/
+    └── java/
+```
+
+## Relevant skills
+
+| Skill | Status |
+| --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | <Badge text="Available" variant="success" /> |
+
+Future skills may cover testing, security, modernization, and observability without replacing this framework page.
+
+## Available examples
+
+<CardGrid>
+	<LinkCard title="Spring Boot REST API" href="/languages/java/examples/spring-boot-rest-api/" description="Layered REST API reference application." />
+</CardGrid>
+
+## Platform availability
+
+| Platform | Bootstrap skill status |
+| --- | --- |
+| GitHub Copilot | Planned |
+| Grok | Available |
+| Claude Code | Planned |
+
+Details: [compatibility matrix](/languages/java/compatibility/).
+
+## Official documentation
+
+- [Spring Boot reference documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+
+## Compatibility notes
+
+- Prefer Jakarta EE namespace APIs (`jakarta.*`) with Spring Boot 3.
+- Keep Actuator exposure intentional; do not enable sensitive endpoints by default.
+- When adding persistence, include test strategy (in-memory or Testcontainers) in the same change set when practical.

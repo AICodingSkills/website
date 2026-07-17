@@ -1,0 +1,53 @@
+---
+title: Roadmap
+description: Near-term and longer-term roadmap for AI Coding Skills frameworks, concerns, languages, and platforms.
+---
+
+import { Badge, Aside } from '@astrojs/starlight/components';
+
+This roadmap is intentionally lightweight. Status labels match the skill badge system used across the site.
+
+## Current focus
+
+| Item | Status |
+| --- | --- |
+| Spring Boot bootstrap skills and examples | <Badge text="Available" variant="success" /> (Grok first) |
+| Helidon bootstrap | <Badge text="In Progress" variant="caution" /> |
+| Jetty bootstrap | <Badge text="Planned" variant="note" /> |
+| Copilot and Claude Code packaging parity | <Badge text="Planned" variant="note" /> |
+
+## Frameworks
+
+| Framework | Intent |
+| --- | --- |
+| Spring Boot | Initial Available path |
+| Helidon | SE and MP bootstrap |
+| Jetty | Embedded bootstrap |
+| Tomcat | Embedded / conventional server skills |
+| Quarkus | Bootstrap and testing skills |
+| Micronaut | Bootstrap skills |
+| Jakarta EE | Broader EE application patterns |
+
+## Cross-cutting concerns
+
+- Java testing
+- Java modernization
+- Security
+- Observability
+
+## Expansion
+
+- Additional programming languages beyond Java
+- Additional AI coding platforms beyond GitHub Copilot, Grok, and Claude Code
+- Cross-language skill and example indexes once more than one language ships
+
+## Sequencing principles
+
+1. Ship one solid bootstrap path end-to-end before broadening widely.
+2. Keep platform packaging separate from language documentation.
+3. Update the [compatibility matrix](/languages/java/compatibility/) whenever status changes.
+4. Prefer examples and tests that prove skill quality.
+
+<Aside type="note">
+Roadmap items are community goals, not delivery commitments. Propose changes via issues or pull requests in the relevant repository.
+</Aside>

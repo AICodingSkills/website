@@ -1,0 +1,28 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import FeatureCard from './FeatureCard.astro';
+
+interface Props {
+	title: string;
+	framework: string;
+	description: string;
+	href: string;
+}
+
+const { title, framework, description, href } = Astro.props;
+---
+
+<FeatureCard class="example-card">
+	<div class="example-card__header">
+		<span class="example-card__icon" aria-hidden="true">
+			<Icon name="document" size="1.2rem" />
+		</span>
+		<span class="example-card__framework">{framework}</span>
+	</div>
+	<h3 class="example-card__title">{title}</h3>
+	<p class="example-card__description">{description}</p>
+	<a class="card-link card-link--arrow" href={href}>
+		View example
+		<span aria-hidden="true">→</span>
+	</a>
+</FeatureCard>

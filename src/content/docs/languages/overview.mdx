@@ -1,0 +1,41 @@
+---
+title: Languages Overview
+description: Programming-language roots for AI Coding Skills documentation, starting with Java.
+---
+
+import { LinkCard, Aside } from '@astrojs/starlight/components';
+
+Skills, examples, framework docs, guides, and compatibility information live under a **programming-language root**. Platform documentation stays outside this hierarchy so each AI coding tool can support multiple languages.
+
+## Current languages
+
+<LinkCard
+	title="Java"
+	href="/languages/java/"
+	description="Spring Boot, Helidon, and Jetty frameworks with bootstrap skills, examples, guides, and a compatibility matrix."
+/>
+
+## Documentation layout
+
+Under each language root you will find:
+
+| Section | Purpose |
+| --- | --- |
+| Frameworks | Programming models independent of any one skill |
+| Skills | Installable bootstrap and extension skills |
+| Examples | Runnable reference applications |
+| Guides | Cross-cutting practices (testing, security, modernization) |
+| Compatibility | Platform × skill status matrix |
+
+## Adding languages later
+
+When additional languages are introduced:
+
+1. Create a new directory under `/languages/<language>/`.
+2. Mirror the frameworks / skills / examples / guides structure.
+3. Add top-level cross-language skill and example indexes only after more than one language exists.
+4. Keep platform pages language-agnostic and link into language-specific skill pages.
+
+<Aside type="tip">
+Start with the [Java overview](/languages/java/) for the current ecosystem.
+</Aside>

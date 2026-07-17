@@ -1,0 +1,27 @@
+---
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	href: string;
+	meta?: string;
+	status?: 'available' | 'progress' | 'planned' | 'experimental';
+	cta?: string;
+}
+
+const { title, description, href, meta, status, cta = 'Learn more' } = Astro.props;
+---
+
+<a class="feature-grid-card" href={href}>
+	<div class="feature-grid-card__top">
+		{meta && <span class="feature-grid-card__meta">{meta}</span>}
+		{status && <StatusBadge status={status} />}
+	</div>
+	<h3 class="feature-grid-card__title">{title}</h3>
+	<p class="feature-grid-card__description">{description}</p>
+	<span class="feature-grid-card__cta">
+		{cta}
+		<span aria-hidden="true">→</span>
+	</span>
+</a>

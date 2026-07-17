@@ -1,0 +1,25 @@
+---
+interface Props {
+	eyebrow?: string;
+	title: string;
+	description?: string;
+	headingId: string;
+}
+
+const { eyebrow, title, description, headingId } = Astro.props;
+---
+
+<header class="section-header">
+	<div class="section-header__copy">
+		{eyebrow && <p class="section-header__eyebrow">{eyebrow}</p>}
+		<h2 class="section-header__title" id={headingId}>{title}</h2>
+		{description && <p class="section-header__description">{description}</p>}
+	</div>
+	{
+		Astro.slots.has('action') && (
+			<div class="section-header__action">
+				<slot name="action" />
+			</div>
+		)
+	}
+</header>

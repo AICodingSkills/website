@@ -1,0 +1,50 @@
+---
+title: Platforms Overview
+description: AI coding platforms supported by AI Coding Skills, and how platform docs relate to language-specific skills.
+---
+
+import { LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+AI Coding Skills ships **platform-specific packaging** for the same language skills. Platform pages explain installation, plugin formats, repositories, and usage conventions. They do not duplicate full framework documentation.
+
+## Why platforms are top-level
+
+Each AI coding tool can support multiple languages over time. Keeping platform docs outside `/languages/` avoids nesting Copilot, Grok, or Claude Code under Java—and keeps the door open for additional languages without restructuring navigation.
+
+## Supported platforms
+
+<CardGrid>
+	<LinkCard
+		title="GitHub Copilot"
+		href="/platforms/github-copilot/"
+		description="Custom instructions, prompts, skills, and Copilot SDK examples for Java."
+	/>
+	<LinkCard
+		title="Grok"
+		href="/platforms/grok/"
+		description="Plugin-packaged Java bootstrap skills for the Grok ecosystem."
+	/>
+	<LinkCard
+		title="Claude Code"
+		href="/platforms/claude-code/"
+		description="Skills, commands, agents, and workflows for Claude Code."
+	/>
+</CardGrid>
+
+## Repositories
+
+| Platform | Repository |
+| --- | --- |
+| GitHub Copilot | [AI-Coding-Skills/java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) |
+| Grok | [AI-Coding-Skills/java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) |
+| Claude Code | [AI-Coding-Skills/java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) |
+
+## How platform docs relate to skills
+
+1. Read the platform page for install and packaging rules.
+2. Open the language skill page under [`/languages/java/skills/`](/languages/java/skills/) for purpose, prompts, expected structure, and limitations.
+3. Use the [compatibility matrix](/languages/java/compatibility/) to see which platforms currently support each skill.
+
+<Aside type="note">
+Framework deep-dives live under [`/languages/java/frameworks/`](/languages/java/frameworks/). Platform pages only link to those resources.
+</Aside>

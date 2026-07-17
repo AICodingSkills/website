@@ -1,0 +1,30 @@
+---
+import FeatureCard from './FeatureCard.astro';
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	href: string;
+	status: 'available' | 'progress' | 'planned' | 'experimental';
+	platforms: string;
+}
+
+const { title, description, href, status, platforms } = Astro.props;
+---
+
+<FeatureCard class="skill-card">
+	<div class="skill-card__header">
+		<h3 class="skill-card__title">{title}</h3>
+		<StatusBadge status={status} />
+	</div>
+	<p class="skill-card__description">{description}</p>
+	<p class="skill-card__platforms">
+		<span class="skill-card__platforms-label">Platforms</span>
+		{platforms}
+	</p>
+	<a class="card-link card-link--arrow" href={href}>
+		Open skill
+		<span aria-hidden="true">→</span>
+	</a>
+</FeatureCard>

@@ -1,0 +1,28 @@
+{
+  "name": "aicodingskills-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Documentation site for the AI Coding Skills open-source initiative",
+  "homepage": "https://aicodingskills.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AI-Coding-Skills/website.git"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.41.3",
+    "astro": "^7.0.2",
+    "sharp": "^0.34.5",
+    "starlight-theme-next": "^0.4.0"
+  }
+}

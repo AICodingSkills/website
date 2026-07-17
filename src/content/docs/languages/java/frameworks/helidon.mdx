@@ -1,0 +1,90 @@
+---
+title: Helidon
+description: Helidon SE and Helidon MP framework overview for AI Coding Skills.
+---
+
+import { Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+Helidon covers both **Helidon SE** (reactive, lightweight) and **Helidon MP** (MicroProfile / Jakarta EE style) programming models. Skills should make the chosen model explicit in prompts and generated structure.
+
+## Framework overview
+
+AI Coding Skills Helidon work focuses on:
+
+- REST/HTTP endpoints
+- Configuration
+- Service layering appropriate to SE or MP
+- Health checks
+- Tests that exercise HTTP behavior
+
+## Supported Java versions
+
+| Java | Notes |
+| --- | --- |
+| 21 | Preferred for new projects |
+| 17 | Supported where Helidon version requires it |
+
+## Supported framework versions
+
+Target a current stable Helidon 4.x line unless a skill page pins a different version. Document SE vs MP clearly in skill output.
+
+## Programming model
+
+### Helidon SE
+
+- Explicit server and routing setup
+- Functional/handler-oriented endpoints
+- Config loaded from Helidon Config APIs
+
+### Helidon MP
+
+- CDI-based application model
+- JAX-RS resource classes
+- MicroProfile Config, Health, and related conventions
+
+## Common project structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Main.java
+│   │       └── service/
+│   └── resources/
+│       └── application.yaml
+└── test/
+    └── java/
+```
+
+Exact layout differs between SE and MP; skills should document the variant they generate.
+
+## Relevant skills
+
+| Skill | Status |
+| --- | --- |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | <Badge text="In Progress" variant="caution" /> |
+
+## Available examples
+
+<CardGrid>
+	<LinkCard title="Helidon SE Service" href="/languages/java/examples/helidon-se-service/" description="Reference Helidon SE HTTP service." />
+</CardGrid>
+
+## Platform availability
+
+| Platform | Bootstrap skill status |
+| --- | --- |
+| GitHub Copilot | Planned |
+| Grok | In Progress |
+| Claude Code | Planned |
+
+## Official documentation
+
+- [Helidon documentation](https://helidon.io/docs)
+
+## Compatibility notes
+
+- Do not mix SE and MP patterns in a single generated application unless the user explicitly requests a migration path.
+- Prefer health and readiness endpoints that match Helidon conventions for the chosen model.
+- Keep dependencies aligned with the Helidon BOM for the selected version.

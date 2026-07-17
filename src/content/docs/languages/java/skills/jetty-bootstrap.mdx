@@ -1,0 +1,119 @@
+---
+title: Jetty Bootstrap
+description: Bootstrap embedded Jetty applications with handlers, Jakarta Servlet APIs, graceful shutdown, and integration tests.
+badge:
+  text: Planned
+  variant: note
+---
+
+import { Badge, Aside, LinkCard, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Create embedded Jetty applications with handlers, Jakarta Servlet APIs, graceful shutdown, and integration tests.
+
+## Purpose
+
+Help AI coding tools scaffold embedded Jetty applications that start cleanly, expose HTTP endpoints, shut down gracefully, and include automated HTTP tests.
+
+## Current status
+
+<Badge text="Planned" variant="note" /> across [Grok](/platforms/grok/), [GitHub Copilot](/platforms/github-copilot/), and [Claude Code](/platforms/claude-code/).
+
+## Supported frameworks
+
+- [Jetty](/languages/java/frameworks/jetty/)
+
+## Supported Java versions
+
+- Java 21 (preferred)
+- Java 17 (supported)
+
+## Supported platform repositories
+
+| Platform | Repository | Status |
+| --- | --- | --- |
+| Grok | [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) | Planned |
+| GitHub Copilot | [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) | Planned |
+| Claude Code | [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) | Planned |
+
+## Common use cases
+
+- Embedded server bootstrap for library-style or standalone apps
+- Handler-based HTTP APIs
+- Jakarta Servlet deployments inside Jetty
+- Graceful shutdown and integration testing
+
+## Example prompts
+
+```text
+Bootstrap an embedded Jetty application using Java 21 and Maven with a JSON handler, graceful shutdown, and integration tests.
+```
+
+```text
+Create an embedded Jetty app that deploys a Jakarta Servlet and serves a health endpoint.
+```
+
+```text
+Add HTTP integration tests that start the embedded server on an ephemeral port.
+```
+
+## Expected generated project structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Application.java
+│   │       ├── server/
+│   │       │   └── JettyServerFactory.java
+│   │       └── handler/
+│   └── resources/
+└── test/
+    └── java/
+```
+
+## Installation or usage by platform
+
+<Tabs>
+	<TabItem label="Grok">
+		<Badge text="Planned" variant="note" /> — track [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok).
+	</TabItem>
+	<TabItem label="GitHub Copilot">
+		<Badge text="Planned" variant="note" /> — track [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot).
+	</TabItem>
+	<TabItem label="Claude Code">
+		<Badge text="Planned" variant="note" /> — track [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code).
+	</TabItem>
+</Tabs>
+
+## Source repository links
+
+- [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok)
+- [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot)
+- [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code)
+
+## Limitations
+
+- Skill content is designed ahead of platform packaging.
+- Does not cover external servlet-container deployments as the primary path.
+- Security and observability remain separate concerns.
+
+## Roadmap
+
+- Land initial Available packaging on at least one platform
+- Expand servlet vs handler examples
+- Align with Jetty 12 Jakarta APIs and testing patterns
+
+## Related examples
+
+<CardGrid>
+	<LinkCard title="Embedded Jetty Application" href="/languages/java/examples/embedded-jetty/" />
+</CardGrid>
+
+## Related framework page
+
+<LinkCard title="Jetty framework" href="/languages/java/frameworks/jetty/" />
+
+<Aside type="note">
+Until status is Available, use the [example page](/languages/java/examples/embedded-jetty/) as the design target for contributions.
+</Aside>

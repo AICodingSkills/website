@@ -1,0 +1,62 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+
+const links = [
+	{ href: '/getting-started/', label: 'Docs' },
+	{ href: '/platforms/overview/', label: 'Platforms' },
+	{ href: '/languages/java/', label: 'Java' },
+	{ href: '/languages/java/skills/', label: 'Skills' },
+	{ href: '/languages/java/examples/', label: 'Examples' },
+] as const;
+---
+
+<nav class="site-nav" aria-label="Primary">
+	{
+		links.map((link) => (
+			<a
+				href={link.href}
+				class="site-nav__link"
+				{...('external' in link && link.external
+					? { target: '_blank', rel: 'noopener noreferrer' }
+					: {})}
+			>
+				{link.label}
+			</a>
+		))
+	}
+</nav>
+<Default><slot /></Default>
+
+<style>
+	@layer starlight.components {
+		.site-nav {
+			display: none;
+			align-items: center;
+			gap: 0.15rem;
+			margin-inline-end: 0.25rem;
+		}
+
+		.site-nav__link {
+			color: var(--sl-color-gray-2);
+			font-size: var(--sl-text-sm);
+			font-weight: 500;
+			line-height: 1;
+			padding: 0.4rem 0.5rem;
+			border-radius: 0.35rem;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+		.site-nav__link:hover,
+		.site-nav__link:focus-visible {
+			color: var(--sl-color-white);
+			background-color: color-mix(in srgb, var(--sl-color-gray-5) 55%, transparent);
+		}
+
+		@media (min-width: 72rem) {
+			.site-nav {
+				display: flex;
+			}
+		}
+	}
+</style>

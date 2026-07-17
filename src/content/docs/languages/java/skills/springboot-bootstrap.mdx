@@ -1,0 +1,135 @@
+---
+title: Spring Boot Bootstrap
+description: Bootstrap runnable Spring Boot applications with controllers, services, configuration, validation, health checks, and tests.
+badge:
+  text: Available
+  variant: success
+---
+
+import { Badge, Aside, LinkCard, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Create runnable Spring Boot applications with controllers, services, configuration, validation, health checks, and tests.
+
+## Purpose
+
+Help AI coding tools generate a coherent Spring Boot starting point that builds, tests, and exposes a small REST API with production-minded defaults.
+
+## Current status
+
+<Badge text="Available" variant="success" /> on [Grok](/platforms/grok/).  
+<Badge text="Planned" variant="note" /> for [GitHub Copilot](/platforms/github-copilot/) and [Claude Code](/platforms/claude-code/).
+
+## Supported frameworks
+
+- [Spring Boot](/languages/java/frameworks/spring-boot/)
+
+## Supported Java versions
+
+- Java 21 (preferred)
+- Java 17 (supported)
+
+## Supported platform repositories
+
+| Platform | Repository | Status |
+| --- | --- | --- |
+| Grok | [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) | Available |
+| GitHub Copilot | [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) | Planned |
+| Claude Code | [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) | Planned |
+
+## Common use cases
+
+- Greenfield REST API bootstrap
+- Layered controller / service / repository structure
+- Validation and problem details for invalid input
+- Actuator health endpoints
+- Adding persistence, Testcontainers, and configuration properties iteratively
+
+## Example prompts
+
+```text
+Bootstrap a Spring Boot application using Java 21 and Maven.
+```
+
+```text
+Create a customer REST API with controller, service, repository, validation, Actuator, and tests.
+```
+
+```text
+Add PostgreSQL persistence and Testcontainers to this Spring Boot project.
+```
+
+```text
+Add centralized exception handling to this Spring Boot REST API.
+```
+
+```text
+Add type-safe configuration using @ConfigurationProperties.
+```
+
+## Expected generated project structure
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/app/
+│   │       ├── Application.java
+│   │       └── customer/
+│   │           ├── CustomerController.java
+│   │           ├── CustomerService.java
+│   │           ├── CustomerRepository.java
+│   │           └── CustomerResponse.java
+│   └── resources/
+│       └── application.yml
+└── test/
+    └── java/
+```
+
+## Installation or usage by platform
+
+<Tabs>
+	<TabItem label="Grok">
+		1. Install skills from [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) using the repository README.
+		2. Enable the Spring Boot Bootstrap skill.
+		3. Run one of the example prompts above.
+		4. Build and test the generated project locally.
+	</TabItem>
+	<TabItem label="GitHub Copilot">
+		Packaging is <Badge text="Planned" variant="note" />. Follow [GitHub Copilot platform docs](/platforms/github-copilot/) and the [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) README when Available.
+	</TabItem>
+	<TabItem label="Claude Code">
+		Packaging is <Badge text="Planned" variant="note" />. Follow [Claude Code platform docs](/platforms/claude-code/) and the [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) README when Available.
+	</TabItem>
+</Tabs>
+
+## Source repository links
+
+- [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok)
+- [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot)
+- [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code)
+
+## Limitations
+
+- Does not replace Spring Security hardening; see the [security guide](/languages/java/guides/security/).
+- Persistence choices should be stated in the prompt; defaults stay intentionally small.
+- Platform packaging outside Grok may lag the skill content on this site.
+
+## Roadmap
+
+- Copilot and Claude Code packaging
+- Optional modules for security, observability, and modernization
+- Broader example coverage beyond a single REST resource
+
+## Related examples
+
+<CardGrid>
+	<LinkCard title="Spring Boot REST API" href="/languages/java/examples/spring-boot-rest-api/" />
+</CardGrid>
+
+## Related framework page
+
+<LinkCard title="Spring Boot framework" href="/languages/java/frameworks/spring-boot/" />
+
+<Aside type="tip">
+Compare generated output against the [compatibility matrix](/languages/java/compatibility/) before relying on a platform that is still Planned.
+</Aside>

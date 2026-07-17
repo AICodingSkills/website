@@ -1,0 +1,82 @@
+---
+title: Claude Code
+description: Install and use AI Coding Skills Java packages with Claude Code.
+---
+
+import { Aside, Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+Claude Code support provides Java skills, commands, agents, and workflows for bootstrapping and extending applications in a Claude Code session.
+
+## Repository
+
+[AI-Coding-Skills/java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code)
+
+## Supported components
+
+| Component | Purpose |
+| --- | --- |
+| Skills | Framework bootstrap and extension guidance |
+| Commands | Invokable workflows for common Java tasks |
+| Agents | Specialized agent definitions for larger changes |
+| Prompts | Reusable prompts aligned with skill goals |
+
+## Installation approach
+
+1. Open the [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) repository.
+2. Follow the README for Claude Code skill/command install conventions.
+3. Load the Java skills into your Claude Code environment.
+4. Invoke a bootstrap skill and verify the generated project.
+
+## Plugin or skill structure
+
+Expect assets to organize:
+
+- **Skills** — durable guidance for framework bootstrap
+- **Commands** — short, invokable task entry points
+- **Agents** — multi-step workflows when a single prompt is not enough
+
+Platform packaging details live in the repository; skill semantics live on this site under Languages → Java.
+
+## Current Java skills
+
+| Skill | Status |
+| --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | <Badge text="Planned" variant="note" /> |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | <Badge text="Planned" variant="note" /> |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | <Badge text="Planned" variant="note" /> |
+
+## Example prompts
+
+```text
+Bootstrap a Spring Boot application using Java 21 and Maven.
+Create a customer REST API with controller, service, repository,
+validation, Actuator, and tests.
+```
+
+```text
+Add type-safe configuration using @ConfigurationProperties.
+Document each property and add validation.
+```
+
+## Contribution process
+
+1. Contribute to [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code).
+2. Align new commands and agents with existing Java skill contracts.
+3. Update compatibility status when a skill becomes usable.
+4. Follow the [Contributing guide](/contributing/).
+
+## Compatibility status
+
+Claude Code packaging for Java bootstrap skills is **planned**. Prefer the [compatibility matrix](/languages/java/compatibility/) for the latest status.
+
+<Aside type="caution">
+Do not treat this page as a substitute for framework documentation. Link out to [`/languages/java/frameworks/`](/languages/java/frameworks/) for programming-model details.
+</Aside>
+
+## Related Java skills
+
+<CardGrid>
+	<LinkCard title="Spring Boot Bootstrap" href="/languages/java/skills/springboot-bootstrap/" />
+	<LinkCard title="Helidon Bootstrap" href="/languages/java/skills/helidon-bootstrap/" />
+	<LinkCard title="Jetty Bootstrap" href="/languages/java/skills/jetty-bootstrap/" />
+</CardGrid>

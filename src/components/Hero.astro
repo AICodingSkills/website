@@ -1,0 +1,32 @@
+---
+import Default from '@astrojs/starlight/components/Hero.astro';
+
+const isHomepage =
+	Astro.locals.starlightRoute.id === '' || Astro.locals.starlightRoute.id === 'index';
+
+const trustItems = [
+	'Java-first',
+	'Multi-platform',
+	'Community-maintained',
+	'Open source',
+] as const;
+---
+
+{
+	isHomepage ? (
+		<div class="home-hero">
+			<Default>
+				<slot />
+			</Default>
+			<ul class="home-hero__trust">
+				{trustItems.map((item) => (
+					<li>{item}</li>
+				))}
+			</ul>
+		</div>
+	) : (
+		<Default>
+			<slot />
+		</Default>
+	)
+}

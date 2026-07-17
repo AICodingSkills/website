@@ -1,0 +1,84 @@
+---
+title: Java Overview
+description: Purpose, platforms, frameworks, skills, examples, compatibility, and repositories for the AI Coding Skills Java initiative.
+---
+
+import { Badge, LinkCard, CardGrid, Aside } from '@astrojs/starlight/components';
+
+The Java initiative provides community-maintained skills, prompts, agents, and examples that help AI coding tools create and evolve production-minded Java applications.
+
+## Purpose
+
+- Give agents consistent conventions for popular Java frameworks
+- Bootstrap runnable applications with tests and operational basics
+- Keep platform packaging separate from framework documentation
+- Make compatibility status explicit and easy to update
+
+## Supported AI coding platforms
+
+| Platform | Repository |
+| --- | --- |
+| [GitHub Copilot](/platforms/github-copilot/) | [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) |
+| [Grok](/platforms/grok/) | [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) |
+| [Claude Code](/platforms/claude-code/) | [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) |
+
+## Supported Java versions
+
+| Version | Support intent |
+| --- | --- |
+| Java 21 | Primary target for new skills and examples |
+| Java 17 | Supported where a framework or migration path requires it |
+| Newer LTS | Evaluated as frameworks and tooling stabilize |
+
+Skills should state their supported Java versions on each skill page.
+
+## Available frameworks
+
+<CardGrid>
+	<LinkCard title="Spring Boot" href="/languages/java/frameworks/spring-boot/" description="Web, configuration, validation, persistence, testing, Actuator." />
+	<LinkCard title="Helidon" href="/languages/java/frameworks/helidon/" description="Helidon SE and MP with Jakarta EE / MicroProfile conventions." />
+	<LinkCard title="Jetty" href="/languages/java/frameworks/jetty/" description="Embedded Jetty, handlers, servlet APIs, lifecycle, HTTP testing." />
+</CardGrid>
+
+## Available skills
+
+| Skill | Status |
+| --- | --- |
+| [Spring Boot Bootstrap](/languages/java/skills/springboot-bootstrap/) | <Badge text="Available" variant="success" /> |
+| [Helidon Bootstrap](/languages/java/skills/helidon-bootstrap/) | <Badge text="In Progress" variant="caution" /> |
+| [Jetty Bootstrap](/languages/java/skills/jetty-bootstrap/) | <Badge text="Planned" variant="note" /> |
+
+## Examples
+
+<CardGrid>
+	<LinkCard title="Spring Boot REST API" href="/languages/java/examples/spring-boot-rest-api/" />
+	<LinkCard title="Helidon SE Service" href="/languages/java/examples/helidon-se-service/" />
+	<LinkCard title="Embedded Jetty" href="/languages/java/examples/embedded-jetty/" />
+</CardGrid>
+
+## Compatibility table
+
+Statuses are maintained here and on the dedicated [compatibility page](/languages/java/compatibility/).
+
+| Skill | GitHub Copilot | Grok | Claude Code |
+| --- | --- | --- | --- |
+| Spring Boot Bootstrap | Planned | Available | Planned |
+| Helidon Bootstrap | Planned | In Progress | Planned |
+| Jetty Bootstrap | Planned | Planned | Planned |
+
+## Repositories
+
+| Repository | Role |
+| --- | --- |
+| [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) | Copilot packaging |
+| [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) | Grok packaging |
+| [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) | Claude Code packaging |
+| [website](https://github.com/AI-Coding-Skills/website) | This documentation site |
+
+## Roadmap
+
+Near-term Java work covers bootstrap skills for Spring Boot, Helidon, and Jetty, then expands to Tomcat, Quarkus, Micronaut, Jakarta EE, testing, modernization, security, and observability. See the [project roadmap](/roadmap/).
+
+<Aside type="tip">
+Guides for [testing](/languages/java/guides/testing/), [security](/languages/java/guides/security/), and [modernization](/languages/java/guides/modernization/) complement the bootstrap skills.
+</Aside>

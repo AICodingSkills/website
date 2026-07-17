@@ -1,0 +1,66 @@
+---
+title: Contributing
+description: How to contribute skills, examples, compatibility testing, and documentation to AI Coding Skills.
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+AI Coding Skills is a community-maintained open-source initiative. Contributions are welcome across skills, examples, docs, and platform adaptations.
+
+## What we accept
+
+- new framework skills
+- improvements to existing skills
+- runnable examples
+- compatibility testing
+- documentation contributions
+- issue reports for outdated APIs
+- platform-specific adaptations
+
+## Repositories
+
+| Repository | Contribute here for |
+| --- | --- |
+| [java-for-github-copilot](https://github.com/AI-Coding-Skills/java-for-github-copilot) | Copilot packaging |
+| [java-for-grok](https://github.com/AI-Coding-Skills/java-for-grok) | Grok packaging |
+| [java-for-claude-code](https://github.com/AI-Coding-Skills/java-for-claude-code) | Claude Code packaging |
+| [website](https://github.com/AI-Coding-Skills/website) | Documentation site |
+
+## Documentation contributions
+
+<Steps>
+
+1. **Fork and clone** [AI-Coding-Skills/website](https://github.com/AI-Coding-Skills/website).
+2. **Install and run locally**
+
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+3. **Edit content** under `src/content/docs/`. Keep skills and examples under `/languages/java/…`. Keep platform docs under `/platforms/`.
+4. **Update statuses** in the [compatibility matrix](/languages/java/compatibility/) when platform support changes.
+5. **Open a pull request** with a clear summary and test notes (`npm run build`).
+
+</Steps>
+
+## Skill contribution checklist
+
+- Purpose, status badge, supported Java versions
+- Example prompts and expected project structure
+- Per-platform usage notes or Planned status
+- Limitations and related framework/example links
+- No duplicated full framework manuals on platform pages
+
+## Compatibility updates
+
+When a skill becomes usable on a platform:
+
+1. Update `/languages/java/compatibility.mdx`
+2. Update the [Java overview](/languages/java/) table
+3. Update the skill page badges and platform page status table
+4. Adjust sidebar badges in `astro.config.mjs` if the overall skill status changed
+
+<Aside type="tip">
+Prefer small, reviewable pull requests. Separate docs-only changes from packaging changes in platform repositories when possible.
+</Aside>
