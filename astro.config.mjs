@@ -65,6 +65,17 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Grok Bot Templates',
+					items: [
+						{ label: 'Templates Overview', slug: 'platforms/grok/templates' },
+						{
+							label: 'Helidon Engineer',
+							slug: 'platforms/grok/templates/helidon-engineer',
+							badge: { text: 'Available', variant: 'success' },
+						},
+					],
+				},
+				{
 					label: 'Languages',
 					items: [{ label: 'Languages Overview', slug: 'languages/overview' }],
 				},

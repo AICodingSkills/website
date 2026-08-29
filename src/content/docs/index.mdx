@@ -1,10 +1,10 @@
 ---
 title: AI Coding Skills
-description: Community-maintained skills, plugins, agents, prompts, and examples for AI coding tools.
+description: Community-maintained skills, plugins, agents, prompts and examples for AI coding tools.
 template: splash
 hero:
   title: AI Coding Skills
-  tagline: Community-maintained skills, plugins, agents, prompts, and examples for AI coding tools.
+  tagline: Community-maintained skills, plugins, agents, prompts and examples for AI coding tools.
   actions:
     - text: Explore Java Skills
       link: /languages/java/skills/
@@ -39,11 +39,20 @@ import HowItWorks from '../../components/home/HowItWorks.astro';
 
 			[Platform guide](/platforms/github-copilot/) · [Repository](https://github.com/AI-Coding-Skills/java-for-github-copilot)
 		</Card>
-		<Card title="Grok" icon="rocket">
-			Java bootstrap skills packaged for the Grok plugin ecosystem.
+		<div class="home-card-link">
+			<a
+				class="home-card-link__target"
+				href="/platforms/grok/templates/"
+				aria-label="Grok — Bot templates"
+			>
+				<span class="sr-only">Grok Bot templates</span>
+			</a>
+			<Card title="Grok" icon="rocket">
+				Java bootstrap skills and Grok Bot templates.
 
-			[Platform guide](/platforms/grok/) · [Repository](https://github.com/AI-Coding-Skills/java-for-grok)
-		</Card>
+				[Platform guide](/platforms/grok/) · [Repository](https://github.com/AI-Coding-Skills/java-for-grok)
+			</Card>
+		</div>
 		<Card title="Claude Code" icon="puzzle">
 			Java skills, commands, agents, and workflows for Claude Code.
 
