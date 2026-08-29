@@ -1,11 +1,23 @@
 ---
 title: Grok
-description: Install and use AI Coding Skills Java packages with Grok.
+description: Install and use AI Coding Skills Java packages and Grok Bot templates with Grok.
 ---
 
 import { Aside, Badge, LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-Grok support packages Java application bootstrap skills for the Grok plugin ecosystem, with an emphasis on runnable Spring Boot, Helidon, and Jetty starting points.
+Grok support packages Java application bootstrap skills for the Grok plugin ecosystem, and hosts **Grok Bot templates** — installable teammates that load those skills.
+
+## Grok Bot templates
+
+Grok Bot templates are installable teammates. Skills are rulebooks those Bots load.
+
+| Template | Status |
+| --- | --- |
+| [Helidon Engineer](/platforms/grok/templates/helidon-engineer/) | <Badge text="Available" variant="success" /> |
+| Spring Boot Engineer | <Badge text="Planned" variant="note" /> |
+| AEM Engineer | <Badge text="Planned" variant="note" /> |
+
+[Browse all Grok Bot templates →](/platforms/grok/templates/)
 
 ## Repository
 
@@ -15,6 +27,7 @@ Grok support packages Java application bootstrap skills for the Grok plugin ecos
 
 | Component | Purpose |
 | --- | --- |
+| Grok Bot templates | Installable teammates that load Java skills |
 | Plugin packages | Installable skill bundles for Grok |
 | Bootstrap skills | Generate runnable Java applications |
 | Prompts | Task prompts aligned with each skill |
@@ -26,6 +39,8 @@ Grok support packages Java application bootstrap skills for the Grok plugin ecos
 2. Follow the README for current Grok plugin install steps.
 3. Enable the Java bootstrap skills you need in your Grok environment.
 4. Run a skill prompt and validate build + tests locally.
+
+For Bot templates, open a [template page](/platforms/grok/templates/), use **Add to Grok Bot**, then follow that template’s after-install steps.
 
 ## Plugin or skill structure
 
@@ -66,10 +81,10 @@ Add PostgreSQL persistence and Testcontainers to this Spring Boot project.
 
 ## Compatibility status
 
-Grok is the initial platform with **Available** coverage for Spring Boot Bootstrap. Helidon is in progress; Jetty is planned.
+Grok is the initial platform with **Available** coverage for Spring Boot Bootstrap and the **Helidon Engineer** Bot template. Helidon Bootstrap skill is in progress; Jetty is planned.
 
 <Aside type="note">
-Skill pages under Languages → Java remain the canonical place for prompts, expected structure, and limitations.
+Skill pages under Languages → Java remain the canonical place for bootstrap skill prompts, expected structure, and limitations. Bot template pages live under [Platforms → Grok → Templates](/platforms/grok/templates/).
 </Aside>
 
 ## Related Java skills
